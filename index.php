@@ -5,8 +5,7 @@ require_once "functions.php";
 $veateade = '';
 $edukalt = false;
 
-$raamatudResult = $mysqli->query("SELECT RaamatID, Pealkiri, Autor FROM Raamat ORDER BY Pealkiri");
-
+$raamatudResult = $mysqli->query("SELECT RaamatID, Pealkiri, Autor FROM raamat ORDER BY Pealkiri");
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $eesnimi = trim($_POST['eesnimi'] ?? '');
     $perekonnanimi = trim($_POST['perekonnanimi'] ?? '');
